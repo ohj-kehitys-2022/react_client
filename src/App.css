@@ -1,7 +1,13 @@
 .App {
   text-align: center;
 }
-
+h1{
+  color: rgb(28, 9, 101);
+  background-color: rgb(27, 182, 182);
+}
+h2{
+  color: rgb(80, 45, 223);
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

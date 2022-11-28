@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import MyClass from './MyClass';
+import MyFunction from './MyFunction';
+import MyHook from './MyHook';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+    <BrowserRouter>
+      
+        <ul>
+          <li> <Link to="/myfunction">Funktio esimerkki</Link> </li>
+          <li> <Link to="/myclass">Class esimerkki</Link> </li>
+          <li> <Link to="/myhook">Hooks esimerkki</Link>  </li>
+        </ul>
+        <hr />
+      
+      <Routes>
+        <Route exact path="/myfunction" element={<MyFunction fname="Teppo"/>} />
+        <Route exact path="/myclass" element={<MyClass fname="Teppo"/>} />
+        <Route exact path="/myhook" element={<MyHook fname="Teppo"/>} />
+      </Routes>
+    </BrowserRouter>
     </div>
   );
 }
